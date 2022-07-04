@@ -68,13 +68,13 @@ void PrintTwoDim(int[,] arr)
 }
 
 //void PrintOneDim(int[] col)
-{
-    for (int i = 0; i < col.Length; i++)
-    {
-        Console.Write(col[i] + " ");
-    }
-    Console.WriteLine();
-}
+// {
+//     for (int i = 0; i < col.Length; i++)
+//     {
+//         Console.Write(col[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
 Console.WriteLine("Введите размер массива:");
 int m = int.Parse(Console.ReadLine());
@@ -128,12 +128,87 @@ while(pos < m)
 // PrintOneDim(arr);
 // Console.WriteLine(min);
 
+void CreatingArray(int[,] arr)
 
+for (int i = 0; i < arr.GetLength(0); i++)
+{
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        arr[i, j] = new Random().Next(0, 20);
+    }
+}
 
+void PrintTwoDim(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            Console.Write(arr[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+Console.WriteLine("Введите размер массива:");
+int m = int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
+
+int[, ] mass =  = new int[m, n]
+
+CreatingArray(mass);
+Console.WriteLine("Наш массив:");
+PrintTwoDim(mass);
+Console.WriteLine();
 
 
 /* Задача 58: Задайте две матрицы. Напишите программу, которая будет
 находить произведение двух матриц. */
+
+void CreatingArray(int[,] arr)
+
+for (int i = 0; i < arr.GetLength(0); i++)
+{
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        arr[i, j] = new Random().Next(0, 20);
+    }
+}
+
+void PrintTwoDim(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            Console.Write(arr[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+Console.WriteLine("Введите размер первого массива:");
+int m = int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите размер второго массива:");
+int q = int.Parse(Console.ReadLine());
+int w = int.Parse(Console.ReadLine());
+
+
+int[, ] massOne =  = new int[m, n];
+int[, ] massTwo =  = new int[q, w];
+
+CreatingArray(massOne);
+CreatingArray(massTwo);
+// Console.WriteLine("Наш массив:");
+// PrintTwoDim(mass);
+// Console.WriteLine();
+
+if(m==w)
+{
+
+}
 
 
 /* Задача 60: Сформируйте трёхмерный массив из неповторяющихся
